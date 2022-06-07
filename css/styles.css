@@ -1,0 +1,930 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 254, 253);
+}
+
+.container-index{
+    display: grid;
+    grid-template-rows: 0.2fr 17fr 3fr;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+}
+header{
+    grid-area: header;
+}
+header nav ul{
+    border-bottom: 1.1px solid;
+    padding: 10px; 
+}
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+}
+.nav-phone{
+    display: none;
+}
+.logo-phone{
+    display: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    color: black; 
+    margin: 0.8rem;
+    padding: 2rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;;
+}
+header nav ul li a:hover{
+    color: #ff381e;
+    transition: 0.1s ease;
+}
+.container-index main{
+    grid-area: main;
+    border-right: 1px solid;
+}
+.logo{
+    margin-right: 2rem;
+    padding: 2rem;
+}
+.container-index main h1{
+    color: #ff381e;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.container-index footer{
+    border: 1px solid;
+}
+.container-index footer p{
+    position: static;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gradient {
+    position: fixed;
+    width: 43rem;
+    height: 43rem;
+    border-radius: 80% 22% 80% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgb(255, 38, 0), rgba(255, 0, 0, 0.945));
+    opacity: 0.3;
+    z-index: -2;
+  }
+
+
+/*PHONE 320x568PX*/
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+.container-index{
+    display: grid;
+    grid-template-rows: 0.1fr 1.7fr 0.1fr;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+}
+/*HEADER*/
+.nav-container{
+    top: -22000px;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid;
+    position: absolute;
+    width: 100%;
+  
+}
+nav ul li{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+
+}
+.nav-container ul li a:hover{
+    color: #ff381e;
+    transition: ease 0.2s;
+}
+.nav-phone{
+    border: 1px solid;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+    position: relative;
+    background-color: #ffff;
+}
+header:hover > .nav-container{
+    top: 0px;
+    transition: 0.7s ease;
+}
+nav ul{
+    flex-flow: column;
+    text-align: center;
+}
+.logo-wemake-nav{
+    height: 1.9rem;
+    width: 2.5rem;
+    display: inline-block;
+}
+.icon-nav{
+    height: 1.6rem;
+    width: 1.9rem;
+    display: inline-block;
+}
+/*MAIN*/
+.container-index main{
+    display: grid;
+    grid-template-areas: "logo-phone title";
+    grid-template-columns: 70% 30%;
+}
+.logo{
+    display: none;
+}
+.logo-phone{
+    grid-area: logo-phone;
+    display: block;
+    align-self: end;
+    margin-bottom: 5rem;
+}
+.logo-phone img{
+    height: 30rem;
+    width: 7rem;
+}
+.container-index main .title{
+    font-size: 0.8rem;
+    align-self: end;
+    transform: rotate(-180deg);
+    margin-bottom: 8rem;
+    margin-left: -6rem;
+    display: inline-block;
+    grid-area: title;
+    writing-mode: vertical-rl;
+}
+
+}
+/*PHONE 375x667PX*/
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+    nav ul li{
+        font-size: 1.3rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+
+    }
+    .logo-phone img{
+        height: 35rem;
+        width: 8rem;
+    }
+    .title{
+        font-size: 1rem;
+        margin-bottom: 8rem;
+        margin-left: -8rem;
+    }
+    
+ }
+/*PHONE 414x736PX*/
+@media only screen and (max-width: 736px) and (min-width: 414px) {
+   
+    .logo-phone img{
+        height: 40rem;
+        width: 9rem;
+    }
+    .title{
+        font-size: 1.1rem;
+        margin-bottom: 8rem;
+        margin-left: -8rem;
+    }
+ }
+/*PHONE 768x1194PX*/
+@media only screen and (max-width: 1194px) and (min-width: 768px) {
+    .logo-wemake{
+        height: 16rem;
+        width: 70rem;
+    }
+    main h1{
+        font-size: 3rem;
+        margin-left: 5rem;
+    }
+
+}
+/*IPAD PRO 768x1024PX*/
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+    nav ul li a{
+        font-size: 1rem;
+    }
+
+    .logo-wemake{
+        height: 13rem;
+        width: 60rem;
+    }
+    main h1{
+        font-size: 2.5rem;
+        margin-left: 6rem;
+    }
+}
+/*IPAD MINI 768x1024PX*/
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    nav ul li a{
+        font-size: 1rem;
+    }
+
+    .logo-wemake{
+        height: 11rem;
+        width: 50rem;
+    }
+    main h1{
+        font-size: 2.4rem;
+        margin-left: 5rem;
+    }
+}
+/*COMPUTER 699x800X*/
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    nav ul li a{
+        font-size: 0.8rem;
+    }
+
+    .logo-wemake{
+        height: 10rem;
+        width: 45rem;
+    }
+    main h1{
+        font-size: 2.1rem;
+        margin-left: 5rem;
+    }
+ 
+}
+.star{
+    height: 10%;
+    width: 10%;
+    color: #ff381e;
+    position: relative;
+}
+
+
+/*ABOUT PAGE*/
+
+/* IPHONE SE*/
+@media only screen and (max-width: 568px) and (min-width: 320px) {
+    /*MAIN*/
+  .title-about{
+      padding: 1.2rem;
+  }
+  .title-about h2{
+      font-size: 2.5rem;
+  }
+  footer p{
+      font-size: 0.4rem;
+  }
+
+}
+/* IPHONE X*/
+@media only screen and (max-width: 900px) and (min-width: 320px) {
+      /*MAIN*/
+
+    .container-about{
+        display: grid;
+        grid-template-areas: "header"
+        "main"
+        "footer";
+    }
+
+    .container-about header{
+        grid-area: header;
+    }
+    .container-about main{
+        grid-area: main;
+    }
+    .container-about footer{
+        grid-area: footer;
+    }
+
+    .presentacion{
+        display: flex;
+        flex-flow: column;
+        border: 1px solid;
+    }
+    .title-about{
+        padding: 2rem;
+        border-bottom: 1px solid;
+    }
+
+
+    .title-about h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        letter-spacing: 1.4rem;
+        text-align: center;
+        font-weight: 900;
+        color: #ff4b1e;
+
+    }
+
+    .team-img img{
+        width: 100%;
+        border-top: 1px solid;
+    }
+
+        
+    .container-info{
+        display: grid;
+        grid-template-areas: "h3"
+                               "p";
+        gap: 5rem;
+       
+    }
+    .container-info h3{
+        grid-area: h3;
+        font-size: 1.6rem;
+        margin-left: 0.4rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900
+
+    }
+    .container-info p{
+        grid-area: p;
+        line-height: 1.2rem;
+        margin-left: 0.9rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300
+    }
+    .webdesign{
+        border-top: 1px solid;
+        padding: 0.3rem;
+    }
+      /*FOOTER*/
+    footer{
+        border: 1px solid;
+
+    }
+    footer p{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500
+
+    }
+
+}
+/*IPAD PRO*/
+@media only screen and (max-width: 1111px) and (min-width: 834px) {
+      /*MAIN*/
+
+    .container-about{
+        display: grid;
+        grid-template-areas: "header"
+        "main"
+        "footer";
+       
+    }
+
+    .container-about main{
+        height: 90vh;
+    }
+    .presentacion{
+        display: flex;
+        flex-flow: column;
+        border: 1px solid;
+    }
+    .title-about{
+        border-bottom: 1px solid;
+    }
+    .title-about h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 7rem;
+        letter-spacing: 5rem;
+        text-align: center;
+        font-weight: 900;
+        color: #ff4b1e;
+
+    }
+    .team-img{
+        background-image: url("/img/team.png") no rep;
+        border-top: 1px solid;
+        background-size: cover;
+        background-color: white
+    }       
+    .container-info{
+        display: grid;
+        grid-template-areas: "p p p"
+                             "h3 h3 h3"
+                              ;
+        gap: 3rem;
+        padding: 1rem;
+       
+    }
+    .container-info h3{
+        grid-area: h3;
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        text-align: center;
+        margin: 1rem
+    }
+    .container-info p{
+        grid-area: p;
+        text-align: justify;
+        line-height: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300
+    }
+    .webdesign{
+        padding: 0.3rem;
+    }
+      /*FOOTER*/
+    footer{
+        border: 1px solid;
+
+
+    }
+    footer p{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500
+
+    }
+
+}
+/*WEB*/
+@media only screen and (max-width: 2560px) and (min-width: 768px) {
+
+    /*MAIN*/
+    .container-about main{
+        height: 100vh;
+    }
+
+    .presentacion{
+        display: flex;
+        flex-flow: column;
+        border: 1px solid;
+    }
+    .title-about{
+        border-bottom: 1px solid;
+    }
+    .title-about h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 7rem;
+        letter-spacing: 5rem;
+        text-align: center;
+        font-weight: 900;
+        color: #ff4b1e;
+
+    }
+    .team-img{
+        background-image: url("/img/team.png") no rep;
+        border-top: 1px solid;
+        background-size: cover;
+        
+
+    }       
+    .container-info{
+        display: grid;
+        grid-template-areas: "p p p"
+                             "h3 h3 h3"
+                              ;
+        gap: 3rem;
+        padding: 1rem
+       
+    }
+    .container-info h3{
+        grid-area: h3;
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        text-align: center;
+        margin: 1rem
+    }
+    .container-info p{
+        grid-area: p;
+        text-align: justify;
+        line-height: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300
+    }
+    .webdesign{
+        padding: 0.3rem;
+    }
+    footer{
+        border: 1px solid;
+
+    }
+    footer p{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500
+
+    }
+
+}
+@media only screen and (max-width: 900px) and (min-width: 768px) {
+    .container-about main{
+        height: 150vh;
+    }
+
+}
+
+
+
+/*PRODUCTS*/
+
+
+.contenedor-products{
+      display: grid;
+      grid-template-areas: "header"
+                            "main"
+                            "footer";
+      grid-template-rows: 0.2fr 22fr 0fr;
+}
+.contendor-products header{
+      grid-area: header;
+}
+.contendor-products main{
+    grid-area: main;
+}
+.contendor-products footer{
+    grid-area: footer;
+}
+main h4{
+    font-size: 100px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900x;
+    letter-spacing: 8px;
+    border-bottom: 1px solid;
+}
+.packs1{
+    display: grid;
+    grid-template-columns: repeat(6, 0.1fr);
+    grid-template-rows: repeat(3, 0.1fr);
+    gap: 50px;
+    align-items: center;
+    margin: 50px;
+    justify-items: center;
+   
+}
+.packs1 h5{
+    text-align: center;
+    writing-mode: vertical-rl;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+    color: rgb(255, 94, 0);
+    font-size: 15px;
+}
+.pack1{
+    border: 1px solid;
+}
+.pack1 p{
+    display: inline-block;
+    height: 100px;
+    padding: 40px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.gradient3 {
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    border-radius: 80% 22% 80% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgb(255, 17, 0), rgba(128, 59, 255, 0.863));
+    opacity: 0.2;
+    z-index: -2;
+}
+footer{
+    border: 1px solid;
+}
+footer p{
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* IPHONE SE*/
+@media only screen and (max-width: 568px) and (min-width: 320px) {
+    
+    .contendor-products main h4{
+        font-size: 2rem;
+      }
+      
+}
+/* IPHONE X*/
+@media only screen and (max-width: 736px) and (min-width: 300px) {
+    
+    .contendor-products main h4{
+        font-size: 3rem;
+        text-align: center;
+        padding: 3rem;
+        border: 1px solid;
+      }
+      .packs1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .packs1 h5{
+        text-align: center;
+        writing-mode: horizontal-tb;
+        color: rgb(255, 94, 0);
+        font-size: 2rem;
+    }
+    .pack1{
+        padding: 3rem;
+        border: 1px solid;
+    }
+    footer{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        border: 1px solid;
+
+    }
+
+      
+
+
+}
+/*IPAD*/
+@media only screen and (max-width: 1024px) and (min-width: 1366px) {
+    .pack1{
+        padding: 10rem;
+    }
+    .packs1{
+        grid-template-columns: repeat(3, 0.1fr);
+        justify-content: center;
+        background-color: #ff381e;
+    }
+    .packs1 h5{
+        writing-mode: horizontal-tb;
+        font-size: 2rem;
+    }
+
+}
+/* WEB 800X600 */
+@media only screen and (max-width: 1010px) and (min-width: 707px) {
+    .pack1{
+        padding: 2rem;
+    }
+    .packs1{
+        grid-template-columns: repeat(3, 0.1fr);
+        justify-content: center;
+    }
+    .packs1 h5{
+        writing-mode: horizontal-tb;
+        font-size: 2rem;
+    }
+
+}
+
+
+
+/*PORTFOLIO*/
+.container-portfolio h5{
+    font-size: 8rem;
+    letter-spacing: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+main h6{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 8rem;
+    letter-spacing: 7rem;
+    font-weight: 800px;
+    margin: 2rem;
+    color: rgb(255, 94, 0);
+}
+.portfolio-titles{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.portfolio-titles h3{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 200px;
+   
+}
+.boxes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+   
+}
+.box{
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+}
+.table-portfolio{
+    margin: 80px;
+}
+
+
+/* PHONE X*/
+@media only screen and (max-width: 1193px) and (min-width: 300px) {
+    .title-portfolio{
+        border: 1px solid;
+        padding: 1.5rem;
+
+    }
+    .title-portfolio h5{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .container-portfolio h6{
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.8rem;
+    }
+    .table-portfolio{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+
+
+      
+
+
+}
+/* IPAD*/
+@media only screen and (max-width: 1200px) and (min-width: 800px) {
+
+    .title-portfolio h5{
+        font-size: 7rem;
+
+    }
+
+}
+/* WEB*/
+@media only screen and (max-width: 2600px) and (min-width: 1193px) {
+    .title-portfolio{
+        border-top: 1px solid;
+        padding: 2rem;
+        text-align: center;
+        
+        }
+    .title-portfolio h5{
+        font-size: 8rem;
+        letter-spacing: 2rem;
+    }
+    .table-portfolio .box{
+        padding: 6rem;
+    }
+
+    .container-portfolio h6{
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.8rem;
+    }
+    .table-portfolio{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+}
+
+
+/*SUPPORT*/
+
+.support h6{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 200px;
+    margin-left: 50px;
+}
+form{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+fieldset{
+    background-color: rgb(243, 243, 243);
+    border: 1px solid;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    margin: 40px;
+    width: 600px;
+    
+}
+
+fieldset label{
+    letter-spacing: 10px;
+
+}
+
+fieldset input{
+    background-color: white;
+    border: 1px solid;
+    font-family: 'Poppins', sans-serif;
+    padding: 1px;
+    margin-bottom: 30px;
+    
+}
+
+fieldset select{
+    background-color: white;
+    border: 1px solid;
+    font-family: 'Poppins', sans-serif;
+    padding: 1px;
+    margin-bottom: 30px;
+}
+
+
+#send{
+    margin-top: 40px;
+    margin-right: 20px;
+    letter-spacing: 5px;
+    padding: 5px;
+}
+#errase{
+    margin-top: 40px;
+    margin-right: 20px;
+    letter-spacing: 5px;
+    padding: 5px;
+}
+
+.gradient4 {
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    border-radius: 80% 22% 80% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgba(255, 17, 0, 0.918), rgba(255, 59, 92, 0.863));
+    opacity: 0.2;
+    z-index: -2;
+  }
+
+  .gradient5 {
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    margin-left: 1000px;
+    border-radius: 80% 22% 80% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgba(255, 0, 21, 0.918), rgba(162, 0, 255, 0.849));
+    opacity: 0.09;
+    z-index: -2;
+  }
+
+.service{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.contact{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+table tbody tr td h6{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
+
+
+.table-support tbody tr ul{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin: 11px;
+    line-height: 27px;
+    list-style: none;
+    margin-right: 130px;
+    margin-left: 130px;
+    padding: 10px;
+}
+.table-support tbody tr ul li a{
+    text-decoration: none;
+    color: rgb(255, 94, 0);  
+}
+
+.table-support{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+}
