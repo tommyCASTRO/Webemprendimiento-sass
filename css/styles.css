@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 0 !important;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -10,7 +11,7 @@ body{
 
 .container-index{
     display: grid;
-    grid-template-rows: 0.2fr 17fr 3fr;
+    grid-template-rows: 1fr 3fr 0.1fr;
     grid-template-areas: "header"
                           "main"
                           "footer";
@@ -18,38 +19,25 @@ body{
 header{
     grid-area: header;
 }
-header nav ul{
-    border-bottom: 1.1px solid;
-    padding: 10px; 
-}
-nav ul{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    list-style: none;
-}
-.nav-phone{
-    display: none;
-}
+
 .logo-phone{
     display: none;
 }
 header nav ul li a{
-    text-decoration: none;
-    letter-spacing: 0.1rem;
     color: black; 
-    margin: 0.8rem;
-    padding: 2rem;
+    margin: 2rem;
+   
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-family: 'Poppins', sans-serif;;
+
 }
-header nav ul li a:hover{
+
+header nav ul li:hover{
     color: #ff381e;
     transition: 0.1s ease;
 }
 .container-index main{
     grid-area: main;
-    border-right: 1px solid;
 }
 .logo{
     margin-right: 2rem;
@@ -354,19 +342,29 @@ nav ul{
  
 }
 
-
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
+@keyframes rotation {     from {       transform: rotate(0deg);     }     to {       transform: rotate(359deg);     }   }
 
 
 /*ABOUT PAGE*/
+.container-team {
+    background-color: white;
+    margin: 6rem;
+    justify-content: center;
+}
+.container-team img{
+    width: 70%;
+    margin: 1rem;
+    justify-content: center;
+    justify-content: center;
 
+}
+.container-team p{
+    color: #ff381e;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 900;
+
+}
 /* IPHONE SE*/
 @media only screen and (max-width: 568px) and (min-width: 320px) {
     /*MAIN*/
@@ -405,11 +403,9 @@ nav ul{
     .presentacion{
         display: flex;
         flex-flow: column;
-        border: 1px solid;
     }
     .title-about{
         padding: 2rem;
-        border-bottom: 1px solid;
     }
 
 
@@ -421,21 +417,8 @@ nav ul{
         font-weight: 900;
         color: #ff4b1e;
 
-    }
-
-    .team-img img{
-        width: 100%;
-        border-top: 1px solid;
-    }
-
-        
-    .container-info{
-        display: grid;
-        grid-template-areas: "h3"
-                               "p";
-        gap: 5rem;
-       
-    }
+    }   
+   
     .container-info h3{
         grid-area: h3;
         font-size: 1.6rem;
@@ -452,8 +435,7 @@ nav ul{
         font-weight: 300
     }
     .webdesign{
-        border-top: 1px solid;
-        padding: 0.3rem;
+        padding: 0.7rem;
     }
       /*FOOTER*/
     footer{
@@ -485,10 +467,6 @@ nav ul{
     .presentacion{
         display: flex;
         flex-flow: column;
-        border: 1px solid;
-    }
-    .title-about{
-        border-bottom: 1px solid;
     }
     .title-about h2{
         font-family: 'Poppins', sans-serif;
@@ -499,12 +477,7 @@ nav ul{
         color: #ff4b1e;
 
     }
-    .team-img{
-        background-image: url("/img/team.png") no rep;
-        border-top: 1px solid;
-        background-size: cover;
-        background-color: white
-    }       
+   
     .container-info{
         display: grid;
         grid-template-areas: "p p p"
@@ -550,13 +523,12 @@ nav ul{
 
     /*MAIN*/
     .container-about main{
-        height: 100vh;
+        height: 160vh;
     }
 
     .presentacion{
         display: flex;
         flex-flow: column;
-        border: 1px solid;
     }
     .title-about{
         border-bottom: 1px solid;
@@ -570,13 +542,7 @@ nav ul{
         color: #ff4b1e;
 
     }
-    .team-img{
-        background-image: url("/img/team.png") no rep;
-        border-top: 1px solid;
-        background-size: cover;
-        
-
-    }       
+  
     .container-info{
         display: grid;
         grid-template-areas: "p p p"
@@ -592,14 +558,14 @@ nav ul{
         font-family: 'Poppins', sans-serif;
         font-weight: 900;
         text-align: center;
-        margin: 1rem
+        margin: 1rem;
     }
     .container-info p{
         grid-area: p;
         text-align: justify;
         line-height: 1.2rem;
         font-family: 'Poppins', sans-serif;
-        font-weight: 300
+        font-weight: 300;
     }
     .webdesign{
         padding: 0.3rem;
@@ -617,7 +583,7 @@ nav ul{
 }
 @media only screen and (max-width: 900px) and (min-width: 768px) {
     .container-about main{
-        height: 150vh;
+        height: 300vh;
     }
 
 }
@@ -644,11 +610,11 @@ nav ul{
     grid-area: footer;
 }
 main h4{
-    font-size: 100px;
+    font-size: 7rem;
     color: black;
     font-family: 'Poppins', sans-serif;
-    font-weight: 900px;
-    letter-spacing: 0.2rem;
+    font-weight: 900;
+    letter-spacing: 1.5rem;
     text-align: center;
     border-bottom: 1px solid;
 }
@@ -669,10 +635,12 @@ main h4{
     font-weight: 400px;
     color: rgb(255, 94, 0);
     font-size: 15px;
+    font-weight: 900;
 }
 .pack1{
     border: 1px solid;
 }
+
 .pack1 p{
     display: inline-block;
     height: 100px;
@@ -717,13 +685,14 @@ footer p{
       
 }
 /* IPHONE X*/
-@media only screen and (max-width: 736px) and (min-width: 300px) {
+@media only screen and (max-width: 840px) and (min-width: 300px) {
     
     .contendor-products main h4{
-        font-size: 3rem;
+        font-size: 3.5rem;
         text-align: center;
         padding: 3rem;
         border: 1px solid;
+        font-weight: 800;
       }
       .packs1{
         display: grid;
@@ -751,26 +720,23 @@ footer p{
 
 }
 /*IPAD*/
-@media only screen and (max-width: 1024px) and (min-width: 1366px) {
+@media only screen and (max-width: 1550px) and (min-width: 1366px) {
     .pack1{
         padding: 10rem;
     }
     .packs1{
         grid-template-columns: repeat(3, 0.1fr);
         justify-content: center;
-        background-color: #ff381e;
     }
     .packs1 h5{
         writing-mode: horizontal-tb;
         font-size: 2rem;
     }
-    main h4{
-        text-align: left;
-    }
+  
 
 }
 /* WEB 800X600 */
-@media only screen and (max-width: 1010px) and (min-width: 707px) {
+@media only screen and (max-width: 1550px) and (min-width: 707px) {
     .pack1{
         padding: 2rem;
     }
@@ -794,13 +760,14 @@ footer p{
     font-family: 'Poppins', sans-serif;
 }
 main h6{
+    color: #ff4b1e;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 8rem;
     letter-spacing: 7rem;
-    font-weight: 800px;
+    font-weight: 900px;
     margin: 2rem;
-    color: rgb(255, 94, 0);
+    font-weight: 700;
 }
 .portfolio-titles{
     display: flex;
@@ -814,19 +781,7 @@ main h6{
     font-weight: 200px;
    
 }
-.boxes{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-   
-}
-.box{
-    margin-left: 100px;
-    margin-right: 100px;
-    border: 1px solid;
-    width: 200px;
-    height: 200px;
-}
+
 .table-portfolio{
     margin: 80px;
 }
@@ -841,9 +796,10 @@ main h6{
 
     }
     .title-portfolio h5{
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
-        text-align: center;
+        font-weight: 900;
+        
     }
 
     .container-portfolio h6{
@@ -869,6 +825,7 @@ main h6{
 
     .title-portfolio h5{
         font-size: 7rem;
+        font-weight: 900;
 
     }
     .table-portfolio .box{
@@ -889,10 +846,13 @@ main h6{
         border-top: 1px solid;
         padding: 2rem;
         text-align: center;
+        border: 2px solid;
         }
     .title-portfolio h5{
         font-size: 8rem;
         letter-spacing: 2rem;
+        font-weight: 900;
+     
     }
     .table-portfolio .box{
         height: 50vh;
@@ -920,61 +880,23 @@ main h6{
 .support h6{
     text-align: center;
     font-family: 'Poppins';
-    font-size: 50px;
-    letter-spacing: 10px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
     font-weight: 200px;
-    margin-left: 50px;
 }
 form{
     display: flex;
-    flex-flow: row;
     justify-content: center;
 
 }
-fieldset{
+.fieldset{
     background-color: rgb(243, 243, 243);
     border: 1px solid;
     font-family: 'Poppins', sans-serif;
-    padding: 30px;
-    margin: 40px;
+    padding: 2rem;
+    margin: 2rem;
     width: 600px;
     
-}
-
-fieldset label{
-    letter-spacing: 10px;
-
-}
-
-fieldset input{
-    background-color: white;
-    border: 1px solid;
-    font-family: 'Poppins', sans-serif;
-    padding: 1px;
-    margin-bottom: 30px;
-    
-}
-
-fieldset select{
-    background-color: white;
-    border: 1px solid;
-    font-family: 'Poppins', sans-serif;
-    padding: 1px;
-    margin-bottom: 30px;
-}
-
-
-#send{
-    margin-top: 40px;
-    margin-right: 20px;
-    letter-spacing: 5px;
-    padding: 5px;
-}
-#errase{
-    margin-top: 40px;
-    margin-right: 20px;
-    letter-spacing: 5px;
-    padding: 5px;
 }
 
 .gradient4 {
@@ -988,7 +910,7 @@ fieldset select{
     z-index: -2;
   }
 
-  .gradient5 {
+.gradient5 {
     position: fixed;
     width: 700px;
     height: 700px;
@@ -1003,46 +925,25 @@ fieldset select{
 .service{
     display: flex;
     flex-flow: row wrap;
-
 }
-
-.contact{
-    display: flex;
-    flex-flow: row wrap;
-
-}
-table tbody tr td h6{
-    font-size: 30px;
+.container-footer{
     text-align: center;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 30px;
-    letter-spacing: 1.5px;
-}
-
-
-.table-support tbody tr ul{
-    text-align: center;
-    font-weight: 100;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    margin: 11px;
-    line-height: 27px;
-    list-style: none;
-    margin-right: 130px;
-    margin-left: 130px;
-    padding: 10px;
-}
-.table-support tbody tr ul li a{
-    text-decoration: none;
-    color: rgb(255, 94, 0);  
-}
-
-.table-support{
-    display: flex;
-    flex-flow: row;
     justify-content: center;
-    
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem;
+}
+.container-footer a{
+    text-decoration: none;
+    color: #ff381e;
+}
+
+.row1{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+/* navbar */
+
+.navbar-brand-img{
+    height: 5%;
+    width: 5%;
 }
