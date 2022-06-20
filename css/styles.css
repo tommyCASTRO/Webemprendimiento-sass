@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 0 !important;
+    border-radius: 0 ;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 254, 253);
@@ -24,18 +25,18 @@ header{
     display: none;
 }
 header nav ul li a{
-    color: black; 
     margin: 2rem;
    
     font-family: 'Poppins', sans-serif;
+    
+
+}
+header nav ul li a:hover{
     font-weight: 900;
+    transition: ease 2s;
 
 }
 
-header nav ul li:hover{
-    color: #ff381e;
-    transition: 0.1s ease;
-}
 .container-index main{
     grid-area: main;
 }
@@ -876,6 +877,12 @@ main h6{
 
 
 /*SUPPORT*/
+/* navbar */
+
+.navbar-brand-img{
+    height: 5%;
+    width: 5%;
+}
 
 .support h6{
     text-align: center;
@@ -905,7 +912,7 @@ form{
     height: 700px;
     border-radius: 80% 22% 80% 80%;  
     filter: blur(100px);
-    background: radial-gradient(circle at 50% 50%,rgba(255, 17, 0, 0.918), rgba(255, 59, 92, 0.863));
+    background: radial-gradient(circle at 50% 50%,rgba(255, 17, 0, 0.918), rgba(59, 88, 255, 0.863));
     opacity: 0.2;
     z-index: -2;
   }
@@ -934,6 +941,10 @@ form{
 }
 .container-footer a{
     text-decoration: none;
+    color: #000000;
+}
+.container-footer a:hover{
+    text-decoration: none;
     color: #ff381e;
 }
 
@@ -941,9 +952,27 @@ form{
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-/* navbar */
 
-.navbar-brand-img{
-    height: 5%;
-    width: 5%;
+
+.espiral .espiral-1{
+    z-index: -100;
+    display: flex;
+    animation-name: floating;
+    animation-duration: 3s;
+    flex-flow: row;
+    height: 3%;
+    width: 3%;
+    rotate: 60deg;
+    animation-iteration-count: 
+infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 600px;
+    margin-top: -20px;
 }
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
