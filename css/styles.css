@@ -949,7 +949,7 @@ form{
 }
 
 .row1{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
@@ -958,7 +958,7 @@ form{
     z-index: -100;
     display: flex;
     animation-name: floating;
-    animation-duration: 3s;
+    animation-duration: 3.2s;
     flex-flow: row;
     height: 3%;
     width: 3%;
