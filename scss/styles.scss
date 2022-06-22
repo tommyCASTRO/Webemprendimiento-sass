@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 ;
+}
+$color-principal: #ff381e;
+$bg-color: rgb(255, 254, 253);
+$Roboto: 'Roboto', sans-serif;
+$Poppins: 'Poppins', sans-serif;
+
+@mixin font($size, $family, $weight, $color, $spacing ){
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    letter-spacing: $spacing;
+}
+@mixin flex($flex-flow) {
+    display: flex;
+    flex-flow: $flex-flow;
+}
+
+body{
+    background-color: $bg-color;
+}
+.container-index{
+    display: grid;
+    grid-template-rows: 1fr 3fr 0.1fr;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+}
+header{
+    grid-area: header;
+}
+.logo-phone{
+    display: none;
+}
+header{
+    nav{
+        ul{
+            li{
+                a{
+                    margin: 2rem;
+                    font-family: $Poppins;
+                }
+            }
+        }
+    }
+}
+header{
+    nav{
+        ul{
+            li{
+                a:hover{
+                    @include font(1rem, $Poppins, 900, black, 0px);
+                    transition: ease 2s;
+                }
+            }
+        }
+    }
+   
+}
+.container-index {
+    main{
+        grid-area: main;
+    }
+    
+}
+.logo{
+    margin-right: 2rem;
+    padding: 2rem;
+}
+.container-index{
+    main{
+        h1{
+            color: #ff381e;
+            font-family: 'Poppins', sans-serif;
+            margin-left: 3rem;
+            display: flex;
+            flex-flow: row wrap;
+            @include font(2rem, $Poppins, 600, $color-principal, 0);
+        }
+    }
+
+
+}
+.container-index {
+    footer{
+        border: 1px solid;
+    }
+}
+.container-index footer p{
+    position: static;
+    text-align: center;
+    justify-content: space-between;
+    @include font(0.5rem, $Poppins, black, 700, 0px);
+    @include flex(row)
+}  
+.gradient {
+    position: fixed;
+    width: 43rem;
+    height: 43rem;
+    border-radius: 80% 22% 80% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgb(255, 38, 0), rgba(255, 0, 0, 0.945));
+    opacity: 0.3;
+    z-index: -2;
+}
+//PHONE 320x568PX
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+    .container-index{
+        display: grid;
+        grid-template-rows: 0.1fr 1.7fr 0.1fr;
+        grid-template-areas: "header"
+                              "main"
+                              "footer";
+}
+.logo-wemake-nav{
+    height: 1.9rem;
+    width: 2.5rem;
+}
+.icon-nav{
+    height: 1.6rem;
+    width: 1.9rem;
+    display: inline-block;
+}
+.container-index {
+    main{
+    display: grid;
+    grid-template-areas: "logo-phone title";
+    grid-template-columns: 70% 30%;
+    }
+    
+}
+.logo{
+    display: none;
+}
+.logo-phone{
+    grid-area: logo-phone;
+    display: block;
+    align-self: end;
+    margin-bottom: 5rem;
+}
+.logo-phone{
+    img{
+        height: 30rem;
+        width: 7rem;
+    }
+}
+ main{
+     .title{
+         @include font(0.8rem, $Poppins, 800, black, 0px);
+         align-self: end;
+         transform: rotate(-180deg);
+         margin-bottom: 8rem;
+         margin-left: -6rem;
+         display: inline-block;
+         grid-area: title;
+         writing-mode: vertical-rl;
+     }
+}
+}
+//COMPUTER 699x800X
+@media only screen and (max-width: 667px) and (min-width: 320px) {
+
+    .star{
+        @include flex(
+        );
+        justify-content: center;
+        margin: 3rem;
+    }
+    .star {
+        img{
+            animation: rotation 7s infinite linear;
+        }
+    }
+}
+//PHONE 375x667PX
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+    nav{
+        ul{
+            li{
+                @include font(1.3rem, $Poppins, color, 900, 0);
+            }
+        }
+        
+
+    }
+    .logo-phone {
+        img{
+        height: 35rem;
+        width: 8rem;
+        }
+    }
+    .title{
+        @include font(1rem, $Poppins, 800, black, 0);
+        margin-bottom: 8rem;
+        margin-left: -8rem;
+    }
+    .star{
+        @include flex();
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star {
+        img{
+            animation: rotation 7s infinite linear;
+        }
+    }
+}
+//PHONE 414x736PX
+@media only screen and (max-width: 736px) and (min-width: 414px) {
+   
+    .logo-phone {
+        img{
+            height: 40rem;
+            width: 9rem;
+        }
+    }
+    .title{
+        font-size: 1.1rem;
+        margin-bottom: 8rem;
+        margin-left: -8rem;
+    }
+    .star{
+        @include flex();
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star {
+        img{
+            height: 20%;
+            width: 20%;
+            animation: rotation 7s infinite linear;
+        }
+       
+    }
+}
+//PHONE 768x1194PX
+@media only screen and (max-width: 1194px) and (min-width: 768px) {
+    .logo-wemake{
+        height: 16rem;
+        width: 70rem;
+    }
+    main{
+        h1{
+            font-size: 3rem;
+            margin-left: 5rem;
+        }
+    }
+    .star{
+        display: flex;
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star{
+        img{
+        height: 20%;
+        width: 20%;
+        animation: rotation 7s infinite linear;
+        }
+        
+    }
+
+
+}
+//IPAD PRO 768x1024PX
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+    }
+    .logo-wemake{
+        height: 13rem;
+        width: 60rem;
+    }
+    main {
+        h1{
+        font-size: 2.5rem;
+        margin-left: 6rem;
+        }
+    }
+    .star{
+        display: flex;
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star img{
+        height: 20%;
+        width: 20%;
+        animation: rotation 7s infinite linear;
+    }
+}
+//IPAD MINI 768x1024PX
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+      
+    }
+    .logo-wemake{
+        height: 11rem;
+        width: 50rem;
+    }
+    main {
+        h1{
+            font-size: 2.4rem;
+            margin-left: 5rem;
+        }
+
+    }
+    .star{
+        display: flex;
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star {
+        img{
+            height: 20%;
+            width: 20%;
+            animation: rotation 7s infinite linear;
+
+        }
+       
+    }
+}
+//COMPUTER 699x800X
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+       
+    }
+    .logo-wemake{
+        height: 10rem;
+        width: 45rem;
+    }
+    main {
+        h1{
+            font-size: 2.1rem;
+            margin-left: 5rem;
+        }
+    }
+    .star{
+        display: flex;
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star {
+        img{
+        height: 20%;
+        width: 20%;
+        animation: rotation 7s infinite linear;
+        }
+    }
+}
+//COMPUTER 699x800X
+@media only screen and (max-width: 2560px) and (min-width: 60px) {
+
+    .star{
+        display: flex;
+        justify-content: flex-end;
+        margin: 3rem;
+    }
+    .star {
+        img{
+         height: 20%;
+        width: 20%;
+        animation: rotation 7s infinite linear;
+
+        }
+        
+    }
+ 
+}
+@keyframes rotation {     from {       transform: rotate(0deg);     }     to {       transform: rotate(359deg);     }   }
+
+//ABOUT PAGE
+.container-team {
+    background-color: $bg-color;
+    margin: 6rem;
+}
+.container-team {
+    img{
+    width: 70%;
+    margin: 1rem;
+    justify-content: center;
+    }
+}
+
+.container-team{
+    p{
+    color: $color-principal;
+    text-align: center;
+    @include font(0.7rem, $Poppins, 900, black, 0px)
+    }
+}
+//IPHONE SE
+@media only screen and (max-width: 568px) and (min-width: 320px) {
+    /*MAIN*/
+  .title-about{
+      padding: 1.2rem;
+  }
+  .title-about {
+      h2{
+        font-size: 2.5rem;
+      }
+  }
+  footer {
+      p{
+        font-size: 0.4rem;
+      }
+  }}
+///IPHONE X
+@media only screen and (max-width: 900px) and (min-width: 320px) {
+    //MAIN
+
+  .container-about{
+      display: grid;
+      grid-template-areas: "header"
+      "main"
+      "footer";
+  }
+
+  .container-about {
+      header{
+        grid-area: header;
+
+      }
+     
+  }
+  .container-about {
+      main{
+        grid-area: main;
+      }
+  }
+  .container-about {
+    footer{
+        grid-area: footer;
+    }
+  }
+  .presentacion{
+      @include flex(column)
+  }
+  .title-about{
+      padding: 2rem;
+  }
+}

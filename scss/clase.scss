@@ -1,0 +1,113 @@
+
+//condicionales
+
+@if $bg-color != #fffdfa {
+    p{
+        color: black;
+    }
+}
+@else {
+    p{
+        color: green;
+    }
+}
+
+
+@if $color-principal == #ff381e {
+    h1{
+        color: yellow;
+    }
+}
+@else {
+    h1{
+        color: black;
+    }
+}
+
+
+//mixing
+
+@mixin flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+main{
+    @include flex;
+}
+
+//mixing con parametro
+
+@mixin container ($width, $height, $color){
+    width: $width;
+    height: $height;
+    color: $color;
+}
+footer{
+    @include container(20px, 300px, $color-principal )
+}
+
+//extend
+
+%botones {
+    border-radius: 1rem;
+    background-color: #fffdfa;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+.btn-1{
+    @extend %botones;
+    box-shadow: 2px 2px red;
+}
+.btn-2{
+    @extend %botones;
+    box-shadow: 1px 2px black;
+}
+//bucles
+// for
+
+@for  $i from 1 to 4{
+    .btn-#{$i}{
+        width: 100% / 3 * $i;
+    }
+
+};
+
+//maps
+
+$headings: (
+    h1: 4rem,
+    h2: 5rem,
+    h3: 2rem,
+    h4: 3rem,
+    h5: 1rem,
+    h6: 2rem
+);
+
+$h1: map-get($headings, h1 );
+
+h1{
+    font-size: $h1;
+}
+
+//each
+
+//maps para redes sociales
+
+$redes: (
+    twitter: rgb(235, 12, 67),
+    facebook: blue,
+    instragram: rgb(23, 66, 185),
+    
+);
+
+@each $red, $color in $redes{
+    .btn-#{$red}{
+        background-color: $color;
+    }
+
+}
+
