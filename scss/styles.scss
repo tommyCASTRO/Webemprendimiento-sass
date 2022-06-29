@@ -174,7 +174,7 @@ header{
     nav{
         ul{
             li{
-                @include font(1.3rem, $Poppins, color, 900, 0);
+                @include font(1.3rem, $Poppins, color, 0, 0);
             }
         }
         
@@ -202,6 +202,11 @@ header{
         }
     }
 }
+
+
+
+
+
 //PHONE 414x736PX
 @media only screen and (max-width: 736px) and (min-width: 414px) {
    
@@ -385,26 +390,37 @@ header{
 }
 
 /*ABOUT PAGE*/
+
 .container-team {
-    background-color: $bg-color;
-    margin: 6rem;
-}
-.container-team {
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
     img{
     width: 70%;
     margin: 1rem;
     justify-content: center;
+    
     }
 }
 
 .container-team{
+    text-align: center;
     p{
     color: $color-principal;
     text-align: center;
     @include font(0.7rem, $Poppins, 900, black, 0px)
     }
 }
-
+.imagenes-ceo{
+    background-color: white;
+    border: 2px solid;
+    margin: 1rem;
+}
+.webdesign{
+    h3{
+        text-align: center;
+    }
+}
 
 //IPAD PRO
 @media only screen and (max-width: 1111px) and (min-width: 834px){
@@ -432,6 +448,17 @@ header{
         color: #ff4b1e;
 
         }
+        .container-team {
+            justify-content: center;
+            display: flex;
+            flex-flow: row;
+            img{
+            width: 70%;
+            margin: 1rem;
+            justify-content: center;
+            
+            }
+        }      
         
     }
     .container-info{
@@ -467,6 +494,10 @@ header{
     .webdesign{
         padding: 0.3rem;
     }
+    .imagenes-ceo{
+        display: flex;
+        flex-flow:row;
+    }
       //footer
       footer{
         border: 1px solid;
@@ -501,6 +532,11 @@ header{
         color: #ff4b1e;
     }
 }
+.imagenes-ceo{
+   
+    display: flex;
+    flex-flow:row;
+}
 .container-info{
     display: grid;
     grid-template-areas: "p p p"
@@ -510,6 +546,7 @@ header{
     padding: 1rem
    
 }
+
 .container-info {
     h3{
         grid-area: h3;
@@ -550,7 +587,7 @@ footer{
 
 }
 //IPHONE SE
-@media only screen and (max-width: 568px) and (min-width: 320px) {
+@media only screen and (max-width: 768px) and (min-width: 320px) {
     /*MAIN*/
 .title-about{
       padding: 1.2rem;
@@ -577,11 +614,22 @@ footer{
     p{
         text-align: center;
     }
+    .container-team{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    
+    }
 
 }
-
+.container-team {
+    justify-content: center;
+ 
+}
     
-  footer {
+footer {
       p{
         font-size: 0.4rem;
       }
@@ -626,13 +674,23 @@ footer{
         grid-area: footer;
     }
   }
+
 .presentacion{
       @include flex(column)
   }
- 
+  .container-team {
+    justify-content: center;
+    img{
+    width: 70%;
+    margin: 1rem;
+    justify-content: center;
+    }
+}
 }
 
-  /*PRODUCTS*/
+
+
+/*PRODUCTS*/
 
 .contenedor-products{
     display: grid;
@@ -824,10 +882,6 @@ footer{
 }
 
 
-
-
-
-
 /*PORTFOLIO*/
 .container-portfolio {
     h5{
@@ -879,10 +933,11 @@ main {
     }
 
     .container-portfolio {
+        text-align: center;
         h6{
             text-align: center;
-            font-size: 1.5rem;
-            letter-spacing: 0.8rem;
+            font-size: 1.6rem;
+            letter-spacing: 0.1rem;
         }
     }
 }
@@ -914,7 +969,7 @@ main {
     .container-portfolio {
         h6{
             text-align: center;
-            font-size: 2rem;
+            font-size: 4rem;
             letter-spacing: 0.8rem;
         }
     }
@@ -1073,7 +1128,10 @@ form{
         }
     }
     
-
+    .form-check-label {
+        overflow: auto;
+        white-space: nowrap;
+      }
 
  
   
@@ -1089,6 +1147,11 @@ form{
 
 
 .navbar-brand-img{
+    height: 20%;
+    width: 20%;
+}
+
+.logo-phone-size{
     height: 20%;
     width: 20%;
 }
