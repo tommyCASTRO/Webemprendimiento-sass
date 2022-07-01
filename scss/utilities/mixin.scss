@@ -1,0 +1,11 @@
+@mixin font($size, $family, $weight, $color, $spacing ){
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    letter-spacing: $spacing;
+}
+@mixin flex($flex-flow) {
+    display: flex;
+    flex-flow: $flex-flow;
+}

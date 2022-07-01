@@ -6,18 +6,7 @@
 }
 
 @import "utilities/variables";
-
-@mixin font($size, $family, $weight, $color, $spacing ){
-    font-size: $size;
-    font-family: $family;
-    font-weight: $weight;
-    color: $color;
-    letter-spacing: $spacing;
-}
-@mixin flex($flex-flow) {
-    display: flex;
-    flex-flow: $flex-flow;
-}
+@import "utilities/mixin.scss";
 
 body{
     background-color: $bg-color;
@@ -101,7 +90,7 @@ header{
     z-index: -2;
 }
 /*PHONE 320x568PX*/
-@media only screen and (max-width: 767px) and (min-width: 320px) {
+@media only screen and (max-width: 550px) and (min-width: 320px) {
     .container-index{
         display: grid;
         grid-template-rows: 0.1fr 1.7fr 0.1fr;
@@ -110,8 +99,8 @@ header{
                               "footer";
 }
 .logo-wemake-nav{
-    height: 1.9rem;
-    width: 2.5rem;
+    height: 60%;
+    width: 60%;
 }
 .icon-nav{
     height: 1.6rem;
@@ -126,6 +115,7 @@ header{
     }
     
 }
+
 .logo{
     display: none;
 }
@@ -137,6 +127,8 @@ header{
 }
 .logo-phone{
     img{
+        margin-left: 1rem;
+        margin-top: 5rem;
         height: 30rem;
         width: 7rem;
     }
@@ -154,117 +146,8 @@ header{
      }
 }
 }
-//COMPUTER 699x800X
-@media only screen and (max-width: 667px) and (min-width: 320px) {
 
-    .star{
-        @include flex(wrap
-        );
-        justify-content: center;
-        margin: 3rem;
-    }
-    .star {
-        img{
-            animation: rotation 7s infinite linear;
-        }
-    }
-}
-//PHONE 375x667PX
-@media only screen and (max-width: 667px) and (min-width: 375px) {
-    nav{
-        ul{
-            li{
-                @include font(1.3rem, $Poppins, color, 0, 0);
-            }
-        }
-        
-
-    }
-    .logo-phone {
-        img{
-        height: 35rem;
-        width: 8rem;
-        }
-    }
-    .title{
-        @include font(1rem, $Poppins, 800, black, 0);
-        margin-bottom: 8rem;
-        margin-left: -8rem;
-    }
-    .star{
-        @include flex(wrap);
-        justify-content: flex-end;
-        margin: 3rem;
-    }
-    .star {
-        img{
-            animation: rotation 7s infinite linear;
-        }
-    }
-}
-
-
-
-
-
-//PHONE 414x736PX
-@media only screen and (max-width: 736px) and (min-width: 414px) {
-   
-    .logo-phone {
-        img{
-            height: 40rem;
-            width: 9rem;
-        }
-    }
-    .title{
-        font-size: 1.1rem;
-        margin-bottom: 8rem;
-        margin-left: -8rem;
-    }
-    .star{
-        @include flex(wrap);
-        justify-content: flex-end;
-        margin: 3rem;
-    }
-    .star {
-        img{
-            height: 20%;
-            width: 20%;
-            animation: rotation 7s infinite linear;
-        }
-       
-    }
-}
-//PHONE 768x1194PX
-@media only screen and (max-width: 1194px) and (min-width: 768px) {
-    .logo-wemake{
-        height: 16rem;
-        width: 70rem;
-    }
-    main{
-        h1{
-            font-size: 3rem;
-            margin-left: 5rem;
-        }
-    }
-    .star{
-        display: flex;
-        justify-content: flex-end;
-        margin: 3rem;
-    }
-    .star{
-        img{
-        height: 20%;
-        width: 20%;
-        animation: rotation 7s infinite linear;
-        }
-        
-    }
-
-
-}
-//IPAD PRO 768x1024PX
-@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+@media only screen and (max-width: 3006px) and (min-width: 900px) {
     nav{
         ul{
             li{
@@ -276,10 +159,11 @@ header{
         
     }
     .logo-wemake{
-        height: 13rem;
-        width: 60rem;
+        height: 90%;
+        width: 90%;
     }
     main {
+        height: 100vh;
         h1{
         font-size: 2.5rem;
         margin-left: 6rem;
@@ -296,8 +180,8 @@ header{
         animation: rotation 7s infinite linear;
     }
 }
-//IPAD MINI 768x1024PX
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+@media only screen and (max-width: 900px) and (min-width: 500px) {å
     nav{
         ul{
             li{
@@ -306,54 +190,17 @@ header{
                 }
             }
         }
-      
+        
     }
     .logo-wemake{
-        height: 11rem;
-        width: 50rem;
+        height: 90%;
+        width: 90%;
     }
     main {
+        height: 100vh;
         h1{
-            font-size: 2.4rem;
-            margin-left: 5rem;
-        }
-
-    }
-    .star{
-        display: flex;
-        justify-content: flex-end;
-        margin: 3rem;
-    }
-    .star {
-        img{
-            height: 20%;
-            width: 20%;
-            animation: rotation 7s infinite linear;
-
-        }
-       
-    }
-}
-//COMPUTER 699x800X
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-    nav{
-        ul{
-            li{
-                a{
-                    font-size: 0.8rem;
-                }
-            }
-        }
-       
-    }
-    .logo-wemake{
-        height: 10rem;
-        width: 45rem;
-    }
-    main {
-        h1{
-            font-size: 2.1rem;
-            margin-left: 5rem;
+        font-size: 2rem;
+        margin-left: 6rem;
         }
     }
     .star{
@@ -361,33 +208,32 @@ header{
         justify-content: flex-end;
         margin: 3rem;
     }
-    .star {
-        img{
+    .star img{
         height: 20%;
         width: 20%;
         animation: rotation 7s infinite linear;
-        }
     }
 }
-//COMPUTER 699x800X
-@media only screen and (max-width: 2560px) and (min-width: 60px) {
 
-    .star{
-        display: flex;
-        justify-content: flex-end;
-        margin: 3rem;
-    }
-    .star {
-        img{
-         height: 20%;
-        width: 20%;
-        animation: rotation 7s infinite linear;
-
-        }
-        
-    }
- 
+.star{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3rem;
 }
+.star {
+    img{
+     height: 20%;
+    width: 20%;
+    animation: rotation 7s infinite linear;
+
+    }
+    
+}
+
+
+
+
+
 
 /*ABOUT PAGE*/
 
@@ -402,7 +248,6 @@ header{
     
     }
 }
-
 .container-team{
     text-align: center;
     p{
@@ -422,118 +267,33 @@ header{
     }
 }
 
-//IPAD PRO
-@media only screen and (max-width: 1111px) and (min-width: 834px){
-    //main
-    .container-about{
-        display: grid;
-        grid-template-areas: "header"
-        "main"
-        "footer";
-    }
-    .container-about main{
-        height: 90vh;
-    }
-    .presentacion{
-        @include flex(column)
 
-    }
-    .title-about{
-        h2{
-        font-family: 'Poppins', sans-serif;
-        font-size: 7rem;
-        letter-spacing: 5rem;
-        text-align: center;
-        font-weight: 900;
-        color: #ff4b1e;
-
-        }
-        .container-team {
-            justify-content: center;
-            display: flex;
-            flex-flow: row;
-            img{
-            width: 70%;
-            margin: 1rem;
-            justify-content: center;
-            
-            }
-        }      
-        
-    }
-    .container-info{
-        display: grid;
-        grid-template-areas: "p p p"
-                             "h3 h3 h3"
-                              ;
-        gap: 3rem;
-        padding: 1rem;
-       
-    }
-    .container-info{
-        h3{
-        grid-area: h3;
-        font-size: 2rem;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 900;
-        text-align: center;
-        margin: 1rem
-
-        }
-        
-    }
-    .container-info{
-        p{
-            grid-area: p;
-            text-align: center;
-            line-height: 1.2rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 300
-        }
-    }
-    .webdesign{
-        padding: 0.3rem;
-    }
-    .imagenes-ceo{
-        display: flex;
-        flex-flow:row;
-    }
-      //footer
-      footer{
-        border: 1px solid;
-    }
-    footer {
-        p{
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500
-        }
-    }
-}
 /*WEB*/
-@media only screen and (max-width: 2560px) and (min-width: 768px){
+@media only screen and (max-width: 2560px) and (min-width: 800px){
     /*MAIN*/
 .container-about{
     main{
             height: 140vh;
         }}
+
 .presentacion{
     @include flex(column);
 }
 .title-about{
     border-bottom: 1px solid;
 }
+
 .title-about{
     h2{
         font-family: 'Poppins', sans-serif;
         font-size: 7rem;
         letter-spacing: 5rem;
-        text-align: center;
         font-weight: 900;
         color: #ff4b1e;
+        text-align: center;
     }
 }
 .imagenes-ceo{
-   
     display: flex;
     flex-flow:row;
 }
@@ -551,8 +311,6 @@ header{
     h3{
         grid-area: h3;
         font-size: 2rem;
-        display: inline-block;
-        overflow: hidden;
         white-space: nowrap;
         font-family: 'Poppins', sans-serif;
         font-weight: 900;
@@ -566,7 +324,7 @@ header{
     p{
         @include font(1.2rem, $Poppins, 300, black, 0);
         grid-area: p;
-        text-align: justify;
+        text-align: center;
         line-height: 1.2rem;
         
     }
@@ -587,7 +345,7 @@ footer{
 
 }
 //IPHONE SE
-@media only screen and (max-width: 768px) and (min-width: 320px) {
+@media only screen and (max-width: 800px) and (min-width: 320px) {
     /*MAIN*/
 .title-about{
       padding: 1.2rem;
@@ -635,7 +393,7 @@ footer {
       }
   }}
 ///IPHONE X
-@media only screen and (max-width: 900px) and (min-width: 320px) {
+@media only screen and (max-width: 736px) and (min-width: 320px) {
     //MAIN
 
 .container-about{
@@ -772,7 +530,7 @@ footer{
     .contendor-products {
         main{
             h4{
-         font-size: 3.5rem;
+        font-size: 2.5rem;
         text-align: center;
         padding: 3rem;
         font-family: $Poppins;
@@ -804,7 +562,7 @@ footer{
         border: 1px solid;
     }}
     /*IPAD*/
-    @media only screen and (max-width: 1500px) and (min-width: 1366px) {
+@media only screen and (max-width: 1500px) and (min-width: 1366px) {
     main {
             h4{
                 @include font(7rem, $Poppins, 800, black, 1.5rem);
@@ -826,7 +584,7 @@ footer{
         }
     }}
     /* WEB 800X600 */
-   @media only screen and (max-width: 1501px) and (min-width: 707px) {
+@media only screen and (max-width: 1501px) and (min-width: 707px) {
     main {
         h4{
             @include font(7rem, $Poppins, 900, black, 1.5rem);
@@ -848,7 +606,7 @@ footer{
     } }
 }
     /* WEB 1501-2000 */
-    @media only screen and (max-width: 3000px) and (min-width: 1501px) {
+@media only screen and (max-width: 3000px) and (min-width: 1501px) {
         main {
             h4{
                 @include font(7rem, $Poppins, 900, black, 1.5rem);
@@ -907,7 +665,7 @@ main {
     }
 }
 .table-portfolio{
-    margin: 5rem;
+    margin: 3rem;
 } 
 
 
@@ -917,26 +675,22 @@ main {
 
 @media only screen and (max-width: 767px) and (min-width: 300px) {
     .title-portfolio{
-        border: 2px solid;
-        padding: 1.5rem;
-        text-align: center;
-
+        border: 1.3px solid;
     }
     .title-portfolio {
         h5{
-            font-size: 3rem;
             text-align: center;
-            font-weight: 900;
-            font-size: 2rem;
-
+            font-weight: 700;
+            font-size: 2.5rem;
+            padding: 1.5rem;
+            font-family: $Poppins;
         }
     }
 
     .container-portfolio {
-        text-align: center;
         h6{
             text-align: center;
-            font-size: 1.6rem;
+            font-size: 2rem;
             letter-spacing: 0.1rem;
         }
     }
@@ -944,14 +698,6 @@ main {
 
 @media only screen and (max-width: 1112px) and (min-width: 768px) {
 
-
-    .table-portfolio {
-        .box{
-            height: 50vh;
-            width: 100vh;   
-        }
-    }
-   
     .title-portfolio{
         border: 2px solid;
         padding: 1.5rem;
@@ -961,7 +707,8 @@ main {
     .title-portfolio {
         h5{
             font-size: 7rem;
-            font-weight: 900;
+            font-weight: 600;
+            font-family: $Poppins;
         }
      
     }
@@ -982,12 +729,14 @@ main {
         padding: 2rem;
         text-align: center;
         border: 2px solid;
+
         }
     .title-portfolio {
         h5{
             font-size: 8rem;
             letter-spacing: 2rem;
-            font-weight: 900;
+            font-weight: 600;
+            font-family: $Poppins;
         }
     }
     .table-portfolio {
@@ -1015,12 +764,7 @@ main {
 }
 
 /*SUPPORT*/
-/* navbar */
 
-.navbar-brand-img{
-    height: 5%;
-    width: 5%;
-}
 form{
     display: flex;
     justify-content: center;
@@ -1073,7 +817,7 @@ form{
         color: $color-principal;
     }}}
     .row1{
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         margin-bottom: 1rem;
     
     }
@@ -1147,11 +891,52 @@ form{
 
 
 .navbar-brand-img{
-    height: 20%;
-    width: 20%;
+    height: 17%;
+    width: 17%;
 }
 
-.logo-phone-size{
-    height: 20%;
-    width: 20%;
+.navbar-logo-toogler{
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+
+
+@media (max-width: 580px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
 }
