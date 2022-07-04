@@ -498,6 +498,9 @@ main h6 {
   margin: 3rem; }
 
 @media only screen and (max-width: 767px) and (min-width: 300px) {
+  .container-portfolio main {
+    height: 200vh;
+    background-color: #ff4b1e; }
   .title-portfolio {
     border: 1.3px solid; }
   .title-portfolio h5 {
@@ -512,6 +515,9 @@ main h6 {
     letter-spacing: 0.1rem; } }
 
 @media only screen and (max-width: 1112px) and (min-width: 768px) {
+  .container-portfolio main {
+    height: 600vh;
+    background-color: #ff381e; }
   .title-portfolio {
     border: 2px solid;
     padding: 1.5rem;
@@ -526,6 +532,9 @@ main h6 {
     letter-spacing: 0.8rem; } }
 
 @media only screen and (max-width: 2600px) and (min-width: 1112px) {
+  .container-portfolio main {
+    height: 500vh;
+    background-color: #000000; }
   .title-portfolio {
     border-top: 1px solid;
     padding: 2rem;
