@@ -6,11 +6,15 @@
 }
 @import "utilities/mixin.scss";
 @import "utilities/variables.scss";
+@import "utilities/extend.scss";
 
 
 
 body{
     background-color: $bg-color;
+    main{
+        height: 80%;
+    }
 }
 .container-index{
     display: grid;
@@ -56,6 +60,7 @@ header{
 }
 .container-index{
     main{
+        height: 80vh;
         h1{
             color: #ff381e;
             font-family: 'Poppins', sans-serif;
@@ -73,13 +78,8 @@ header{
         border: 1px solid;
     }
 }
- footer p{
-    position: static;
-    text-align: center;
-    justify-content: space-between;
-    @include font(0.5rem, $Poppins, black, 700, 0px);
-    @include flex(row)
-}  
+
+  
 .gradient {
     position: fixed;
     width: 43rem;
@@ -90,7 +90,6 @@ header{
     opacity: 0.3;
     z-index: -2;
 }
-/*PHONE 320x568PX*/
 @media only screen and (max-width: 550px) and (min-width: 300px) {
     .container-index{
         display: grid;
@@ -98,6 +97,7 @@ header{
         grid-template-areas: "header"
                               "main"
                               "footer";
+                
 }
 .logo-wemake-nav{
     height: 60%;
@@ -110,6 +110,7 @@ header{
 }
 .container-index {
     main{
+        height: 120vh;
     display: grid;
     grid-template-areas: "logo-phone title";
     grid-template-columns: 70% 30%;
@@ -134,6 +135,7 @@ header{
     }
 }
  main{
+     
      .title{
          @include font(0.8rem, $Poppins, 800, black, 0px);
          align-self: end;
@@ -162,8 +164,13 @@ header{
         height: 90%;
         width: 90%;
     }
+    .container-index {
+        main{
+            height: 100vh;
+        }
+        
+    }
     main {
-        height: 100vh;
         h1{
         font-size: 2.5rem;
         margin-left: 6rem;
@@ -197,7 +204,7 @@ header{
         width: 90%;
     }
     main {
-        height: 100vh;
+        height: 200vh;
         h1{
         font-size: 2rem;
         margin-left: 6rem;
@@ -213,6 +220,14 @@ header{
         width: 20%;
         animation: rotation 7s infinite linear;
     }
+}
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .container-index{
+        main{
+            height: 120vh;
+        }
+    }
+
 }
 
 .star{
@@ -302,6 +317,7 @@ header{
 }
 
 .container-info {
+
     h3{
         grid-area: h3;
         font-size: 2rem;
@@ -315,11 +331,15 @@ header{
    
 }
 .container-info {
+    text-align: center;
     p{
         @include font(1.2rem, $Poppins, 300, black, 0);
         grid-area: p;
-        text-align: center;
         line-height: 1.2rem;
+        overflow: hidden;
+        text-overflow: clip;
+   
+
         
     }
 }
@@ -330,12 +350,7 @@ footer{
     border: 1px solid;
 
 }
-footer{
-    p{
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500
-    }
-}
+
 
 }
 //IPHONE SE
@@ -380,12 +395,7 @@ footer{
     justify-content: center;
  
 }
-    
-footer {
-      p{
-        font-size: 0.4rem;
-      }
-  }}
+}
 ///IPHONE X
 @media only screen and (max-width: 736px) and (min-width: 320px) {
     //MAIN
@@ -519,12 +529,7 @@ footer {
 footer{
     border: 1px solid;
 }
-footer{
-    p{
-        font-weight: 900;
-        font-family: 'Poppins', sans-serif;
-    }
-}  
+
 
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
@@ -558,11 +563,7 @@ footer{
         padding: 3rem;
         border: 1px solid;
     }
-    footer{
-        font-family: $Poppins;
-        font-weight: 500;
-        border: 1px solid;
-    }}
+}
     /*IPAD*/
 @media only screen and (max-width: 1500px) and (min-width: 1366px) {
     main {
@@ -792,6 +793,7 @@ main {
 form{
     display: flex;
     justify-content: center;
+    padding: 0.3rem;
 }
 .fieldset{
     background-color: rgb(243, 243, 243);
@@ -801,6 +803,27 @@ form{
     margin: 2rem;
     width: 600px;
 }
+footer{
+    display: grid;
+    grid-template-areas: "columna1 columna2 columna3";
+    ul{
+        a{
+            text-align: center;
+        }
+    }
+      
+  .columna1{
+    grid-area: columna1;
+  }
+  .columna2{
+    grid-area: columna2;
+  }
+  .columna3{
+    grid-area: columna3;
+  }
+  }
+
+  
 .gradient4 {
     position: fixed;
     width: 44rem;
@@ -821,73 +844,64 @@ form{
     background: radial-gradient(circle at 50% 50%,rgba(255, 0, 21, 0.918), rgba(162, 0, 255, 0.849));
     opacity: 0.09;
     z-index: -2;
-  }
+}
 
 .service{
     @include flex(row wrap);
 }
-.container-footer{
-    text-align: center;
-    justify-content: center;
-    font-family: $Poppins;
-    margin: 1rem;
-}
-.container-footer {
-    a{
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: #000000;
-    &:hover{
-        text-decoration: none;
-        color: $color-principal;
-    }}}
-    .row1{
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    
-    }
-    .boton-enter{
+.boton-enter{
         background-color: $btn-color;
-    }
-    .check-btn{
+}
+.check-btn{
         background-color: $btn-color;
 
-    }
+}
 
         
 @media only screen and (max-width: 767px) and (min-width: 300px) {
-        .support h6{
-            @include font(2.5rem, $Poppins, black, 200, 0.5rem);
-            text-align: center;
-        }
-        .container-footer{
-            text-align: center;
-            justify-content: center;
-            font-size: 0.5rem;
-            font-family: $Poppins;
-            margin: 0.1rem;
-        }
-        .row1{
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
+    .support-container main{
+        height: 120vh;
         
-        }
-    
     }
+
+    footer{
+        ul{
+            a{
+                font-size: 0.4rem;
+                font-size: center;
+            }
+        }
+    }
+    .fieldset{
+        font-family: $Poppins;
+        padding: 2rem;
+        margin: 2rem;
+        width: 70%;
+    }
+    .form-check-label {
+        overflow: auto;
+        white-space: wrap;
+      }
+    .support h6{
+        @include font(2.5rem, $Poppins, black, 200, 0.5rem);
+        text-align: center;
+     }
+ }
 @media only screen and (max-width: 3000px) and (min-width: 767px) {
-        .support h6{
-            @include font(7rem, $Poppins, black, 200, 0.5rem);
-            text-align: center;
-        }
+    .support-container main{
+        height: 110vh;
+        
     }
-    
+    .support h6{
+        @include font(7rem, $Poppins, black, 200, 0.5rem);
+        text-align: center;
+    }
     .form-check-label {
         overflow: auto;
         white-space: nowrap;
       }
+}
 
- 
-  
 @keyframes floating {
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, -105px); }
@@ -897,6 +911,14 @@ form{
 
 
 @keyframes rotation {     from {       transform: rotate(0deg);     }     to {       transform: rotate(359deg);     }   }
+
+
+
+
+
+
+
+
 
 
 .navbar-brand-img{
@@ -911,19 +933,9 @@ form{
 }
 
 
-
 .navbar-toggler{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
-}
-
-.navbar-toggler {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
+    @extend %btn;
+   
 }
 
 .navbar-toggler,
@@ -946,7 +958,6 @@ form{
     height: 3px;
     width: 100%;
     background: black;
-    border-radius: 1px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -996,3 +1007,32 @@ form{
 .navbar-toggler.collapsed .toggler-icon {
     background: black;
 }
+
+
+
+
+
+
+footer{
+    ul{
+        list-style: none;
+        font-size: 1rem;
+    }
+    li{
+        font-family: $Poppins;
+        text-align: center;
+        font-weight: 400;}
+     a{
+    font-weight: 200;
+   
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #000000;
+    list-style: none;
+    &:hover{
+        text-decoration: none;
+        color: $color-principal;
+    }}}
+
+
+    
