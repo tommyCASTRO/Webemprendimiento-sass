@@ -726,20 +726,21 @@ footer {
 
 footer {
   justify-content: space-evenly;
-  margin: 0; }
+  background-color: rgba(255, 255, 255, 0.678); }
   footer ul {
     list-style: none;
-    font-size: 1rem; }
-  footer li {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    font-weight: 400; }
-  footer a {
-    font-weight: 200;
-    font-family: 1rem;
-    text-decoration: none;
-    color: #000000;
-    list-style: none; }
-    footer a:hover {
+    padding-left: 0; }
+    footer ul li {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 0.1rem; }
+    footer ul a {
       text-decoration: none;
-      color: #ff381e; }
+      color: #000000;
+      font-size: 0.6rem;
+      margin-bottom: 0.5rem;
+      list-style: none; }
+      footer ul a:hover {
+        text-decoration: none;
+        color: #ff381e; }

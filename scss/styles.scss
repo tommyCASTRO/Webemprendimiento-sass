@@ -1008,25 +1008,28 @@ footer{
 
 footer{
     justify-content: space-evenly;
-    margin: 0;
+    background-color: rgba(255, 255, 255, 0.678);
     ul{
         list-style: none;
-        font-size: 1rem;
+        padding-left: 0;
+        li{
+            font-family: $Poppins;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 0.1rem;
+        }
+        a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 0.6rem;
+            margin-bottom: 0.5rem;
+            list-style: none;
+            &:hover{
+                text-decoration: none;
+                color: $color-principal;
+            }
     }
-    li{
-        font-family: $Poppins;
-        text-align: center;
-        font-weight: 400;
-    }
-     a{
-        
-    font-weight: 200;
-    font-family: 1rem;
    
-    text-decoration: none;
-    color: #000000;
-    list-style: none;
-    &:hover{
-        text-decoration: none;
-        color: $color-principal;
-    }}}
+    
+}
+}
