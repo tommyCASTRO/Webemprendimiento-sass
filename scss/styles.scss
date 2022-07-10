@@ -354,7 +354,7 @@ footer{
 
 }
 //IPHONE SE
-@media only screen and (max-width: 800px) and (min-width: 320px) {
+@media only screen and (max-width: 800px) and (min-width: 310px) {
     /*MAIN*/
 .title-about{
       padding: 1.2rem;
@@ -397,7 +397,7 @@ footer{
 }
 }
 ///IPHONE X
-@media only screen and (max-width: 736px) and (min-width: 320px) {
+@media only screen and (max-width: 736px) and (min-width: 310px) {
     //MAIN
 
 .container-about{
@@ -860,7 +860,7 @@ footer{
         
 @media only screen and (max-width: 767px) and (min-width: 300px) {
     .support-container main{
-        height: 120vh;
+        height: 200vh;
         
     }
 
@@ -876,7 +876,7 @@ footer{
         font-family: $Poppins;
         padding: 2rem;
         margin: 2rem;
-        width: 70%;
+        width: 100%;
     }
     .form-check-label {
         overflow: auto;
@@ -889,7 +889,7 @@ footer{
  }
 @media only screen and (max-width: 3000px) and (min-width: 767px) {
     .support-container main{
-        height: 110vh;
+        height: 160vh;
         
     }
     .support h6{
@@ -911,12 +911,6 @@ footer{
 
 
 @keyframes rotation {     from {       transform: rotate(0deg);     }     to {       transform: rotate(359deg);     }   }
-
-
-
-
-
-
 
 
 
@@ -1012,8 +1006,9 @@ footer{
 
 
 
-
 footer{
+    justify-content: space-evenly;
+    margin: 0;
     ul{
         list-style: none;
         font-size: 1rem;
@@ -1021,11 +1016,13 @@ footer{
     li{
         font-family: $Poppins;
         text-align: center;
-        font-weight: 400;}
+        font-weight: 400;
+    }
      a{
+        
     font-weight: 200;
+    font-family: 1rem;
    
-    font-size: 0.9rem;
     text-decoration: none;
     color: #000000;
     list-style: none;
@@ -1033,6 +1030,3 @@ footer{
         text-decoration: none;
         color: $color-principal;
     }}}
-
-
-    
