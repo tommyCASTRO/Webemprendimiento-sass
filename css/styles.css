@@ -12,9 +12,9 @@
   border-radius: 0%; }
 
 body {
-  background-color: #fffefd; }
-  body main {
-    height: 80%; }
+  background-color: #fffefd;
+  position: relative;
+  padding-bottom: 10em; }
 
 .container-index {
   display: grid;
@@ -45,19 +45,17 @@ header nav ul li a {
   margin-right: 2rem;
   padding: 2rem; }
 
-.container-index main {
-  height: 80vh; }
-  .container-index main h1 {
-    color: #ff381e;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 3rem;
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 2rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    color: #ff381e;
-    letter-spacing: 0; }
+.container-index main h1 {
+  color: #ff381e;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #ff381e;
+  letter-spacing: 0; }
 
 .container-index footer {
   border: 1px solid; }
@@ -85,7 +83,6 @@ header nav ul li a {
     width: 1.9rem;
     display: inline-block; }
   .container-index main {
-    height: 120vh;
     display: grid;
     grid-template-areas: "logo-phone title";
     grid-template-columns: 70% 30%; }
@@ -114,14 +111,14 @@ header nav ul li a {
     grid-area: title;
     writing-mode: vertical-rl; } }
 
-@media only screen and (max-width: 3006px) and (min-width: 900px) {
+@media only screen and (max-width: 1800px) and (min-width: 930px) {
   nav ul li a {
     font-size: 1rem; }
   .logo-wemake {
     height: 90%;
     width: 90%; }
-  .container-index main {
-    height: 100vh; }
+  .container-index {
+    height: 260vh; }
   main h1 {
     font-size: 2.5rem;
     margin-left: 6rem; }
@@ -134,29 +131,33 @@ header nav ul li a {
     width: 20%;
     animation: rotation 7s infinite linear; } }
 
-@media only screen and (max-width: 900px) and (min-width: 550px) {
+@media only screen and (max-width: 3000px) and (min-width: 1800px) {
+  .container-index {
+    height: 360vh; } }
+
+@media only screen and (max-width: 930px) and (min-width: 550px) {
+  .container-index main {
+    height: 170vh; }
   nav ul li a {
     font-size: 1rem; }
   .logo-wemake {
     height: 90%;
     width: 90%; }
-  main {
-    height: 200vh; }
-    main h1 {
-      font-size: 2rem;
-      margin-left: 6rem; }
+  main h1 {
+    font-size: 2rem;
+    margin-left: 6rem; }
   .star {
     display: flex;
     justify-content: flex-end;
     margin: 3rem; }
   .star img {
-    height: 20%;
-    width: 20%;
+    height: 40%;
+    width: 40%;
     animation: rotation 7s infinite linear; } }
 
-@media only screen and (max-width: 700px) and (min-width: 320px) {
+@media only screen and (max-width: 736px) and (min-width: 320px) {
   .container-index main {
-    height: 120vh; } }
+    height: 210vh; } }
 
 .star {
   display: flex;
@@ -164,8 +165,8 @@ header nav ul li a {
   margin: 3rem; }
 
 .star img {
-  height: 20%;
-  width: 20%;
+  height: 30%;
+  width: 30%;
   animation: rotation 7s infinite linear; }
 
 /*ABOUT PAGE*/
@@ -201,7 +202,7 @@ header nav ul li a {
 @media only screen and (max-width: 2560px) and (min-width: 800px) {
   /*MAIN*/
   .container-about main {
-    height: 140vh; }
+    height: 200vh; }
   .presentacion {
     display: flex;
     flex-flow: column; }
@@ -233,17 +234,17 @@ header nav ul li a {
   .container-info {
     text-align: center; }
     .container-info p {
-      font-size: 1.2rem;
+      font-size: 2rem;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       color: black;
       letter-spacing: 0;
       grid-area: p;
-      line-height: 1.2rem;
+      line-height: 2rem;
       overflow: hidden;
       text-overflow: clip; }
   .webdesign {
-    padding: 0.3rem; }
+    padding: 0.6rem; }
   footer {
     border: 1px solid; } }
 
@@ -366,14 +367,26 @@ footer {
 
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
-  .contendor-products main h4 {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 3rem;
+  .contenedor-products main {
+    height: 9000vh; }
+  main h4 {
+    font-size: 1rem;
     font-family: "Poppins", sans-serif;
-    color: #000000;
-    border: 1px solid;
-    font-weight: 800; }
+    font-weight: 900;
+    color: black;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    border-bottom: 1px solid; }
+  .contendor-products main {
+    height: 820vh; }
+    .contendor-products main h4 {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 3rem;
+      font-family: "Poppins", sans-serif;
+      color: #000000;
+      border: 1px solid;
+      font-weight: 800; }
   .packs1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
@@ -389,8 +402,31 @@ footer {
     padding: 3rem;
     border: 1px solid; } }
 
+/* WEB 800X600 */
+@media only screen and (max-width: 1366px) and (min-width: 840px) {
+  .contenedor-products main {
+    height: 300vh; }
+  main h4 {
+    font-size: 7rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: black;
+    letter-spacing: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid; }
+  .pack1 {
+    padding: 2rem; }
+  .packs1 {
+    grid-template-columns: repeat(3, 0.1fr);
+    justify-content: center; }
+  .packs1 h5 {
+    writing-mode: horizontal-tb;
+    font-size: 2rem; } }
+
 /*IPAD*/
 @media only screen and (max-width: 1500px) and (min-width: 1366px) {
+  .contenedor-products main {
+    height: 150vh; }
   main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
@@ -408,27 +444,10 @@ footer {
     writing-mode: horizontal-tb;
     font-size: 2rem; } }
 
-/* WEB 800X600 */
-@media only screen and (max-width: 1501px) and (min-width: 707px) {
-  main h4 {
-    font-size: 7rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    color: black;
-    letter-spacing: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid; }
-  .pack1 {
-    padding: 2rem; }
-  .packs1 {
-    grid-template-columns: repeat(3, 0.1fr);
-    justify-content: center; }
-  .packs1 h5 {
-    writing-mode: horizontal-tb;
-    font-size: 2rem; } }
-
 /* WEB 1501-2000 */
-@media only screen and (max-width: 3000px) and (min-width: 1501px) {
+@media only screen and (max-width: 3000px) and (min-width: 1500px) {
+  .contenedor-products main {
+    height: 150vh; }
   main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
@@ -445,17 +464,6 @@ footer {
   .packs1 h5 {
     writing-mode: horizontal-tb;
     font-size: 2rem; } }
-
-/* IPHONE SE*/
-@media only screen and (max-width: 568px) and (min-width: 320px) {
-  main h4 {
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    color: black;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    border-bottom: 1px solid; } }
 
 /*PORTFOLIO*/
 .container-portfolio h5 {
@@ -609,9 +617,9 @@ footer {
 .check-btn {
   background-color: #dfddff; }
 
-@media only screen and (max-width: 767px) and (min-width: 300px) {
+@media only screen and (max-width: 767px) and (min-width: 320px) {
   .support-container main {
-    height: 200vh; }
+    height: 230vh; }
   footer ul a {
     font-size: 0.4rem;
     font-size: center; }
@@ -631,9 +639,23 @@ footer {
     letter-spacing: 0.5rem;
     text-align: center; } }
 
-@media only screen and (max-width: 3000px) and (min-width: 767px) {
+@media only screen and (max-width: 1024px) and (min-width: 767px) {
   .support-container main {
-    height: 160vh; }
+    height: 300vh; }
+  .support h6 {
+    font-size: 7rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: black;
+    color: 200;
+    letter-spacing: 0.5rem;
+    text-align: center; }
+  .form-check-label {
+    overflow: auto;
+    white-space: nowrap; } }
+
+@media only screen and (max-width: 5000px) and (min-width: 1023px) {
+  .support-container main {
+    height: 360vh; }
   .support h6 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
@@ -723,7 +745,11 @@ footer {
 
 footer {
   justify-content: space-evenly;
-  background-color: rgba(255, 255, 255, 0.678); }
+  background-color: rgba(255, 255, 255, 0.678);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 0; }
   footer ul {
     list-style: none;
     padding-left: 0; }
@@ -745,7 +771,11 @@ footer {
 @media only screen and (max-width: 3000px) and (min-width: 767px) {
   footer {
     justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.678); }
+    background-color: rgba(255, 255, 255, 0.678);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0; }
     footer footer ul {
       list-style: none;
       padding-left: 0; }
