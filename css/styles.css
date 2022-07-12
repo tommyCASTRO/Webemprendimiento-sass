@@ -372,22 +372,18 @@ footer {
 
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
-  main h4 {
-    font-size: 1rem;
+  .contendor-products main h4 {
+    font-size: 2.5rem;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     color: black;
     letter-spacing: 0.2rem;
     text-align: center;
-    border-bottom: 1px solid; }
-  .contendor-products main h4 {
-    font-size: 2.5rem;
+    border-bottom: 1px solid;
     text-align: center;
     padding: 3rem;
     font-family: "Poppins", sans-serif;
-    color: #000000;
-    border: 1px solid;
-    font-weight: 800; }
+    border: 1px solid; }
   .packs1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
@@ -422,28 +418,9 @@ footer {
     writing-mode: horizontal-tb;
     font-size: 2rem; } }
 
-/*IPAD*/
-@media only screen and (max-width: 1500px) and (min-width: 1366px) {
-  .contenedor-products main h4 {
-    font-size: 7rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    color: black;
-    letter-spacing: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid; }
-  .pack1 {
-    padding: 10rem; }
-  .packs1 {
-    grid-template-columns: repeat(3, 2fr);
-    justify-content: center; }
-  .packs1 h5 {
-    writing-mode: horizontal-tb;
-    font-size: 2rem; } }
-
 /* WEB 1501-2000 */
-@media only screen and (max-width: 3000px) and (min-width: 1500px) {
-  .contenedor-products main h4 {
+@media only screen and (max-width: 3000px) and (min-width: 1366px) {
+  main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
@@ -525,7 +502,7 @@ main h6 {
     font-size: 4rem;
     letter-spacing: 0.8rem; } }
 
-@media only screen and (max-width: 3000px) and (min-width: 1112px) {
+@media only screen and (max-width: 2600px) and (min-width: 1112px) {
   .container-portfolio main {
     background-color: #000000; }
   .title-portfolio {

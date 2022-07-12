@@ -539,27 +539,19 @@ footer{
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
  
-    main {
-        h4{
-            @include font(1rem, $Poppins, 900, black, 0.2rem);
-            text-align: center;
-            border-bottom: 1px solid;
-        }
-  
-    }
+   
 
     .contendor-products {
         main{
            
-            h4{
-        font-size: 2.5rem;
+     h4{
+        @include font(2.5rem, $Poppins, 900, black, 0.2rem);
+        text-align: center;
+        border-bottom: 1px solid;
         text-align: center;
         padding: 3rem;
         font-family: $Poppins;
-        color: #000000;
         border: 1px solid;
-        font-weight: 800;
-
             }
         }
         
@@ -581,9 +573,7 @@ footer{
 }
 /* WEB 800X600 */
 @media only screen and (max-width: 1366px) and (min-width: 840px) {
-        .contenedor-products{
-        
-        }
+      
         main {
             h4{
                 @include font(7rem, $Poppins, 900, black, 1.5rem);
@@ -604,35 +594,10 @@ footer{
                 font-size: 2rem;
         } }
 }
-/*IPAD*/
-@media only screen and (max-width: 1500px) and (min-width: 1366px) {
-    .contenedor-products{
-
-    
-    main {
-            h4{
-                @include font(7rem, $Poppins, 800, black, 1.5rem);
-                text-align: center;
-                border-bottom: 1px solid;
-            }
-        } }
-    .pack1{
-        padding: 10rem;
-    }
-    .packs1{
-        grid-template-columns: repeat(3, 2fr);
-        justify-content: center;
-    }
-    .packs1 {
-        h5{
-            writing-mode: horizontal-tb;
-            font-size: 2rem;
-        }
-    }}
 
  /* WEB 1501-2000 */
-@media only screen and (max-width: 3000px) and (min-width: 1500px) {
-    .contenedor-products{
+@media only screen and (max-width: 3000px) and (min-width: 1366px) {
+
         main {
             h4{
                 @include font(7rem, $Poppins, 900, black, 1.5rem);
@@ -640,8 +605,8 @@ footer{
                 border-bottom: 1px solid;
             }
         }
-    
-    }
+
+
         .pack1{
             padding: 2rem;
         }
@@ -757,7 +722,7 @@ main {
     
 }
 
-@media only screen and (max-width: 3000px) and (min-width: 1112px) {
+@media only screen and (max-width: 2600px) and (min-width: 1112px) {
     .container-portfolio{
         main{
            
