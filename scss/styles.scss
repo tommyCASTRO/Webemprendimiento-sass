@@ -159,13 +159,12 @@ header{
             }
         }
         
-    }
+    
     .logo-wemake{
         height: 90%;
         width: 90%;
     }
-    .container-index {
-        height: 260vh;
+ 
     
     }
     main {
@@ -183,23 +182,11 @@ header{
         height: 20%;
         width: 20%;
         animation: rotation 7s infinite linear;
-    }
-}
-@media only screen and (max-width: 3000px) and (min-width: 1800px) {
+    }}
 
-    .container-index {
-        height: 360vh;
-    
-    }
-
-}
 @media only screen and (max-width: 930px) and (min-width: 550px) {
 
-   .container-index{
-       main{
-           height: 170vh;
-       }
-   }
+ 
     nav{
         ul{
             li{
@@ -232,14 +219,7 @@ header{
         animation: rotation 7s infinite linear;
     }
 }
-@media only screen and (max-width: 736px) and (min-width: 320px) {
-    .container-index{
-        main{
-            height: 210vh;
-        }
-    }
 
-}
 
 .star{
     display: flex;
@@ -287,15 +267,80 @@ header{
     }
 }
 
+@media only screen and (max-width: 3000px) and (min-width: 1200px){
 
-/*WEB*/
-@media only screen and (max-width: 2560px) and (min-width: 800px){
-    /*MAIN*/
-.container-about{
     
-    main{
-            height: 200vh;
-        }}
+.presentacion{
+    @include flex(column);
+}
+.title-about{
+    border-bottom: 1px solid;
+}
+
+.title-about{
+    h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 7rem;
+        letter-spacing: 5rem;
+        font-weight: 900;
+        color: #ff4b1e;
+        text-align: center;
+    }
+}
+.imagenes-ceo{
+    display: flex;
+    flex-flow:row;
+}
+.container-info{
+    display: grid;
+    grid-template-areas: "p p p"
+                         "h3 h3 h3"
+                          ;
+    gap: 2rem;
+    padding: 1rem
+   
+}
+
+.container-info {
+
+    h3{
+        grid-area: h3;
+        font-size: 2rem;
+        white-space: nowrap;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        text-align: center;
+        margin: 1rem;
+
+    }
+   
+}
+.container-info {
+    text-align: center;
+    p{
+        @include font(2rem, $Poppins, 300, black, 0);
+        grid-area: p;
+        line-height: 2rem;
+        overflow: hidden;
+        text-overflow: clip;
+   
+
+        
+    }
+}
+.webdesign{
+    padding: 0.6rem;
+}
+footer{
+    border: 1px solid;
+
+}
+
+
+}
+/*WEB*/
+@media only screen and (max-width: 1200px) and (min-width: 834px){
+    /*MAIN*/
 
 .presentacion{
     @include flex(column);
@@ -366,7 +411,7 @@ footer{
 
 }
 //IPHONE SE
-@media only screen and (max-width: 800px) and (min-width: 310px) {
+@media only screen and (max-width: 834px) and (min-width: 310px) {
     /*MAIN*/
 .title-about{
       padding: 1.2rem;
@@ -406,59 +451,6 @@ footer{
 .container-team {
     justify-content: center;
  
-}
-}
-///IPHONE X
-@media only screen and (max-width: 736px) and (min-width: 310px) {
-    //MAIN
-
-.container-about{
-      display: grid;
-      grid-template-areas: "header"
-      "main"
-      "footer";
-  }
-
-.container-about {
-      header{
-        grid-area: header;
-
-      }
-     
-  }
-.title-about{
-    h2{
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.9rem;
-    letter-spacing: 1.3rem;
-    text-align: center;
-    font-weight: 900;
-    color: #ff4b1e;
-
-    }}
-    
-.container-about {
-      main{
-        grid-area: main;
-      }
-  }
-  
-.container-about {
-    footer{
-        grid-area: footer;
-    }
-  }
-
-.presentacion{
-      @include flex(column)
-  }
-  .container-team {
-    justify-content: center;
-    img{
-    width: 70%;
-    margin: 1rem;
-    justify-content: center;
-    }
 }
 }
 
@@ -546,11 +538,7 @@ footer{
 
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
-    .contenedor-products{
-        main{
-            height: 9000vh;
-        }
-    }
+ 
     main {
         h4{
             @include font(1rem, $Poppins, 900, black, 0.2rem);
@@ -562,7 +550,6 @@ footer{
 
     .contendor-products {
         main{
-        height: 820vh;
            
             h4{
         font-size: 2.5rem;
@@ -595,9 +582,7 @@ footer{
 /* WEB 800X600 */
 @media only screen and (max-width: 1366px) and (min-width: 840px) {
         .contenedor-products{
-            main{
-                height: 300vh;
-            }
+        
         }
         main {
             h4{
@@ -622,17 +607,15 @@ footer{
 /*IPAD*/
 @media only screen and (max-width: 1500px) and (min-width: 1366px) {
     .contenedor-products{
-        main{
-            height: 150vh;
-        }
-    }
+
+    
     main {
             h4{
                 @include font(7rem, $Poppins, 800, black, 1.5rem);
                 text-align: center;
                 border-bottom: 1px solid;
             }
-        }
+        } }
     .pack1{
         padding: 10rem;
     }
@@ -650,10 +633,6 @@ footer{
  /* WEB 1501-2000 */
 @media only screen and (max-width: 3000px) and (min-width: 1500px) {
     .contenedor-products{
-        main{
-            height: 150vh;
-        }
-    }
         main {
             h4{
                 @include font(7rem, $Poppins, 900, black, 1.5rem);
@@ -661,6 +640,8 @@ footer{
                 border-bottom: 1px solid;
             }
         }
+    
+    }
         .pack1{
             padding: 2rem;
         }
@@ -718,7 +699,7 @@ main {
 @media only screen and (max-width: 767px) and (min-width: 300px) {
     .container-portfolio{
         main{
-            height: 200vh;
+         
             background-color: #ff4b1e;
         }
   }    
@@ -747,7 +728,7 @@ main {
 @media only screen and (max-width: 1112px) and (min-width: 768px) {
     .container-portfolio{
         main{
-            height: 600vh;
+         
             background-color: #ff381e;
         }
   }    
@@ -779,7 +760,7 @@ main {
 @media only screen and (max-width: 2600px) and (min-width: 1112px) {
     .container-portfolio{
         main{
-            height: 500vh;
+           
             background-color: #000000;
         }
   }    
@@ -893,10 +874,7 @@ footer{
 
         
 @media only screen and (max-width: 767px) and (min-width: 320px) {
-    .support-container main{
-        height: 230vh;
-        
-    }
+  
 
     footer{
         ul{
@@ -922,9 +900,8 @@ footer{
      }
  }
  @media only screen and (max-width: 1024px) and (min-width: 767px) {
-    .support-container main{
-        height: 300vh;
-}
+
+
 .support h6{
     @include font(7rem, $Poppins, black, 200, 0.5rem);
     text-align: center;
@@ -935,10 +912,7 @@ footer{
   }
 }
 @media only screen and (max-width: 5000px) and (min-width: 1023px) {
-    .support-container main{
-        height: 360vh;
-        
-    }
+  
     .support h6{
         @include font(7rem, $Poppins, black, 200, 0.5rem);
         text-align: center;

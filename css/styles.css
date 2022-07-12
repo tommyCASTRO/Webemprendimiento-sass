@@ -114,11 +114,9 @@ header nav ul li a {
 @media only screen and (max-width: 1800px) and (min-width: 930px) {
   nav ul li a {
     font-size: 1rem; }
-  .logo-wemake {
+  nav .logo-wemake {
     height: 90%;
     width: 90%; }
-  .container-index {
-    height: 260vh; }
   main h1 {
     font-size: 2.5rem;
     margin-left: 6rem; }
@@ -131,13 +129,7 @@ header nav ul li a {
     width: 20%;
     animation: rotation 7s infinite linear; } }
 
-@media only screen and (max-width: 3000px) and (min-width: 1800px) {
-  .container-index {
-    height: 360vh; } }
-
 @media only screen and (max-width: 930px) and (min-width: 550px) {
-  .container-index main {
-    height: 170vh; }
   nav ul li a {
     font-size: 1rem; }
   .logo-wemake {
@@ -154,10 +146,6 @@ header nav ul li a {
     height: 40%;
     width: 40%;
     animation: rotation 7s infinite linear; } }
-
-@media only screen and (max-width: 736px) and (min-width: 320px) {
-  .container-index main {
-    height: 210vh; } }
 
 .star {
   display: flex;
@@ -198,11 +186,55 @@ header nav ul li a {
 .webdesign h3 {
   text-align: center; }
 
+@media only screen and (max-width: 3000px) and (min-width: 1200px) {
+  .presentacion {
+    display: flex;
+    flex-flow: column; }
+  .title-about {
+    border-bottom: 1px solid; }
+  .title-about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 7rem;
+    letter-spacing: 5rem;
+    font-weight: 900;
+    color: #ff4b1e;
+    text-align: center; }
+  .imagenes-ceo {
+    display: flex;
+    flex-flow: row; }
+  .container-info {
+    display: grid;
+    grid-template-areas: "p p p" "h3 h3 h3";
+    gap: 2rem;
+    padding: 1rem; }
+  .container-info h3 {
+    grid-area: h3;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin: 1rem; }
+  .container-info {
+    text-align: center; }
+    .container-info p {
+      font-size: 2rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: black;
+      letter-spacing: 0;
+      grid-area: p;
+      line-height: 2rem;
+      overflow: hidden;
+      text-overflow: clip; }
+  .webdesign {
+    padding: 0.6rem; }
+  footer {
+    border: 1px solid; } }
+
 /*WEB*/
-@media only screen and (max-width: 2560px) and (min-width: 800px) {
+@media only screen and (max-width: 1200px) and (min-width: 834px) {
   /*MAIN*/
-  .container-about main {
-    height: 200vh; }
   .presentacion {
     display: flex;
     flex-flow: column; }
@@ -248,7 +280,7 @@ header nav ul li a {
   footer {
     border: 1px solid; } }
 
-@media only screen and (max-width: 800px) and (min-width: 310px) {
+@media only screen and (max-width: 834px) and (min-width: 310px) {
   /*MAIN*/
   .title-about {
     padding: 1.2rem; }
@@ -277,33 +309,6 @@ header nav ul li a {
       align-content: center; }
   .container-team {
     justify-content: center; } }
-
-@media only screen and (max-width: 736px) and (min-width: 310px) {
-  .container-about {
-    display: grid;
-    grid-template-areas: "header" "main" "footer"; }
-  .container-about header {
-    grid-area: header; }
-  .title-about h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.9rem;
-    letter-spacing: 1.3rem;
-    text-align: center;
-    font-weight: 900;
-    color: #ff4b1e; }
-  .container-about main {
-    grid-area: main; }
-  .container-about footer {
-    grid-area: footer; }
-  .presentacion {
-    display: flex;
-    flex-flow: column; }
-  .container-team {
-    justify-content: center; }
-    .container-team img {
-      width: 70%;
-      margin: 1rem;
-      justify-content: center; } }
 
 /*PRODUCTS*/
 .contenedor-products {
@@ -367,8 +372,6 @@ footer {
 
 /* IPHONE X*/
 @media only screen and (max-width: 840px) and (min-width: 300px) {
-  .contenedor-products main {
-    height: 9000vh; }
   main h4 {
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
@@ -377,16 +380,14 @@ footer {
     letter-spacing: 0.2rem;
     text-align: center;
     border-bottom: 1px solid; }
-  .contendor-products main {
-    height: 820vh; }
-    .contendor-products main h4 {
-      font-size: 2.5rem;
-      text-align: center;
-      padding: 3rem;
-      font-family: "Poppins", sans-serif;
-      color: #000000;
-      border: 1px solid;
-      font-weight: 800; }
+  .contendor-products main h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 3rem;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    border: 1px solid;
+    font-weight: 800; }
   .packs1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
@@ -404,8 +405,6 @@ footer {
 
 /* WEB 800X600 */
 @media only screen and (max-width: 1366px) and (min-width: 840px) {
-  .contenedor-products main {
-    height: 300vh; }
   main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
@@ -425,9 +424,7 @@ footer {
 
 /*IPAD*/
 @media only screen and (max-width: 1500px) and (min-width: 1366px) {
-  .contenedor-products main {
-    height: 150vh; }
-  main h4 {
+  .contenedor-products main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -446,9 +443,7 @@ footer {
 
 /* WEB 1501-2000 */
 @media only screen and (max-width: 3000px) and (min-width: 1500px) {
-  .contenedor-products main {
-    height: 150vh; }
-  main h4 {
+  .contenedor-products main h4 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
@@ -500,7 +495,6 @@ main h6 {
 
 @media only screen and (max-width: 767px) and (min-width: 300px) {
   .container-portfolio main {
-    height: 200vh;
     background-color: #ff4b1e; }
   .title-portfolio {
     border: 1.3px solid; }
@@ -517,7 +511,6 @@ main h6 {
 
 @media only screen and (max-width: 1112px) and (min-width: 768px) {
   .container-portfolio main {
-    height: 600vh;
     background-color: #ff381e; }
   .title-portfolio {
     border: 2px solid;
@@ -534,7 +527,6 @@ main h6 {
 
 @media only screen and (max-width: 2600px) and (min-width: 1112px) {
   .container-portfolio main {
-    height: 500vh;
     background-color: #000000; }
   .title-portfolio {
     border-top: 1px solid;
@@ -618,8 +610,6 @@ footer {
   background-color: #dfddff; }
 
 @media only screen and (max-width: 767px) and (min-width: 320px) {
-  .support-container main {
-    height: 230vh; }
   footer ul a {
     font-size: 0.4rem;
     font-size: center; }
@@ -640,8 +630,6 @@ footer {
     text-align: center; } }
 
 @media only screen and (max-width: 1024px) and (min-width: 767px) {
-  .support-container main {
-    height: 300vh; }
   .support h6 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
@@ -654,8 +642,6 @@ footer {
     white-space: nowrap; } }
 
 @media only screen and (max-width: 5000px) and (min-width: 1023px) {
-  .support-container main {
-    height: 360vh; }
   .support h6 {
     font-size: 7rem;
     font-family: "Poppins", sans-serif;
