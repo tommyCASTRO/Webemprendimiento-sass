@@ -390,7 +390,7 @@ footer{
 .container-info {
     text-align: center;
     p{
-        @include font(2rem, $Poppins, 300, black, 0);
+        @include font(1.4rem, $Poppins, 300, black, 0);
         grid-area: p;
         line-height: 2rem;
         overflow: hidden;
@@ -838,7 +838,7 @@ footer{
 }
 
         
-@media only screen and (max-width: 767px) and (min-width: 320px) {
+@media only screen and (max-width: 767px) and (min-width: 310px) {
   
 
     footer{
@@ -851,20 +851,16 @@ footer{
     }
     .fieldset{
         font-family: $Poppins;
-        padding: 2rem;
-        margin: 2rem;
-        width: 100%;
     }
     .form-check-label {
-        overflow: auto;
-        white-space: wrap;
+      
       }
     .support h6{
         @include font(2.5rem, $Poppins, black, 200, 0.5rem);
         text-align: center;
      }
  }
- @media only screen and (max-width: 1024px) and (min-width: 767px) {
+@media only screen and (max-width: 1024px) and (min-width: 767px) {
 
 
 .support h6{

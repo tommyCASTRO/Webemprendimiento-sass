@@ -266,7 +266,7 @@ header nav ul li a {
   .container-info {
     text-align: center; }
     .container-info p {
-      font-size: 2rem;
+      font-size: 1.4rem;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       color: black;
@@ -586,18 +586,12 @@ footer {
 .check-btn {
   background-color: #dfddff; }
 
-@media only screen and (max-width: 767px) and (min-width: 320px) {
+@media only screen and (max-width: 767px) and (min-width: 310px) {
   footer ul a {
     font-size: 0.4rem;
     font-size: center; }
   .fieldset {
-    font-family: "Poppins", sans-serif;
-    padding: 2rem;
-    margin: 2rem;
-    width: 100%; }
-  .form-check-label {
-    overflow: auto;
-    white-space: wrap; }
+    font-family: "Poppins", sans-serif; }
   .support h6 {
     font-size: 2.5rem;
     font-family: "Poppins", sans-serif;
